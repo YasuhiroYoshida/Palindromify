@@ -1,7 +1,7 @@
 PALINDROMIFY
 
 
-Palindromify is a simple game app that lets you play with a palindrome (回文). 
+Palindromify is a simple game that lets you play with a palindrome (回文). 
 I have put it up on my Google App Engine here: http://magarisugikamo.appspot.com/Palindrome
 
 For those of you who don’t know what “palindrome” is, it is “a word, line, verse, number, sentence, etc., reading the same backward as forward, e.g. Panda had nap.
@@ -18,4 +18,4 @@ Note:
 ● Player’s name and scores are kept in memory; nothing is held in a file or a specific database.
 ● It’s a simple 2-page/file app; there’s no login page to distinguish you from other players, either.
 ● The app recognizes you as a returning player only if your name already exists in the memory; if you happen to use the same name as others’ which are already in the memory, you won’t get a score. The incumbent player will.
-● I created this app because I wanted to actually create something upon finishing my study for OCJP a.k.a. SCJP, Oracle Certified Professional Java SE 6 Programmer, reflecting what I had learned from books and web. It’s a small, over-the-weekend project. Not everything I learned is in it. No fancy, visual effects, either. I might get back to this app in the future for bug-fixing, refactoring, and enhancements.
+● I created this app because I wanted to actually make something upon finishing my study for OCJP a.k.a. SCJP, Oracle Certified Professional Java SE 6 Programmer, reflecting what I had learned from books and web. It’s a small, over-the-weekend project. Not everything I learned is in it. No fancy, visual effects, either. I might get back to this app in the future for bug-fixing, refactoring, and enhancements.
