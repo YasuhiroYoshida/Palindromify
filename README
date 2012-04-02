@@ -7,7 +7,11 @@ http://magarisugikamo.appspot.com/Palindrome
 
 For those of you who don’t know what “palindrome” is, it is “a word, line, verse, number, sentence, etc., reading the same backward as forward, e.g. Panda had nap.
 
+<<<<<<< HEAD
 For a reference, there’s a great website that has an extensive list of palindromes: Neil/Fred's Gigantic List of Palindromes
+=======
+For a reference, there’s a great website that has a extensive long list of palindromes: Neil/Fred's Gigantic List of Palindromes
+>>>>>>> 7360e65a8d7eae16d3df414211c42f6b337d9a7a
 http://www.derf.net/palindromes/old.palindrome.html
 
 Rule:
