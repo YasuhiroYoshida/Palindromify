@@ -21,9 +21,9 @@ public class Palindrome extends HttpServlet {
 	public static List<String[]> recordsH;// Players' records arranged by highest score
 	static {
 		records  = new ArrayList<String[]>();
-		records.add(new String[] { "", "0", "0", "0" });
+		records.add(new String[] {"", "0", "0", "0"});// [0]name, [1]current score, [2]total score, [3]highest score 
 		recordsH = new ArrayList<String[]>();
-		recordsH.add(new String[] { "", "0", "0", "0" });
+		recordsH.add(new String[] {"", "0", "0", "0"});// Same as above
 	}
 
 	// Home Page Generator
@@ -72,7 +72,7 @@ public class Palindrome extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
-		out.println("<html><head><title>Palindromifyちとしはちとしは</title></head><body>");
+		out.println("<html><head><title>Palindromify</title></head><body>");
 		out.println("<table border=\"0\">");
 		out.println("<tr><td align=\"center\" colspan=\"2\"><font size=\"+2\">Palindromify</font></td></tr>");
 		out.println("<tr><td align=\"center\" colspan=\"2\">");
@@ -114,8 +114,8 @@ public class Palindrome extends HttpServlet {
 				// Parse both phrase, one from head, the other from tail to see if
 				// they are actually palindromes
 				boolean isPalindrome = true;// whether or not the word/phrase in question is a palindrome
-				for ( int i = 0; i < charListOriginal.size(); i++ ){
-					if ( !charListOriginal.get(i).equals(charListCopy.get(i)) ) {
+				for (int i = 0; i < charListOriginal.size(); i++){
+					if (!charListOriginal.get(i).equals(charListCopy.get(i))) {
 						isPalindrome = false;
 						break;
 					}
@@ -127,7 +127,7 @@ public class Palindrome extends HttpServlet {
 					score = (int) Math.ceil((double)charListOriginal.size() / 2);
 					totalScore = score + Integer.parseInt(tempRecord[2]);
 					highestScore = Integer.parseInt(tempRecord[3]);
-					if( highestScore < score ) highestScore = score;
+					if (highestScore < score) highestScore = score;
 					
 				} else {
 	
@@ -148,9 +148,9 @@ public class Palindrome extends HttpServlet {
 				// Add tempRecord to "records" if it's a new player
 				if (!isOldPlayer) {
 					// Remove the 1st element of "records" if the pseudo element set up by the initializer is still there 
-					if(records.get(0)[0].isEmpty()) {
+					if (records.get(0)[0].isEmpty()) {
 						records.set(0, tempRecord);
-					}else{
+					} else {
 						records.add(tempRecord);
 					}
 				}
@@ -158,11 +158,11 @@ public class Palindrome extends HttpServlet {
 				// 6. Apply quick sort to "records" in order to create lists on "Hall Of Fame"
 				// Apply quick sort in light of totalScore
 				recordsH = new ArrayList<String[]>(records);
-				if(1 < records.size()) quickSort(records, 0, (records.size() - 1), 2);
+				if (1 < records.size()) quickSort(records, 0, (records.size() - 1), 2);
 
 				// Apply quick sort in light of highestScore
 				recordsH = new ArrayList<String[]>(records); 
-				if(1 < recordsH.size()) quickSort(recordsH, 0, (recordsH.size() - 1), 3);
+				if (1 < recordsH.size()) quickSort(recordsH, 0, (recordsH.size() - 1), 3);
 		
 				// Build output (body)
 				out.println("<font size=\"+1\">Result</font></td></tr><tr><td>");
@@ -199,13 +199,13 @@ public class Palindrome extends HttpServlet {
 		 int medianValue = Integer.parseInt(list.get((pointerLeft + pointerRight)/2)[switcher]);
 	 
 		 do {
-			 while ( Integer.parseInt( list.get(pointerLeft )[switcher] ) > medianValue ) pointerLeft++;
-			 while ( Integer.parseInt( list.get(pointerRight)[switcher] ) < medianValue ) pointerRight--; 
-			 if ( pointerLeft <= pointerRight) Collections.swap(list, pointerLeft++, pointerRight--); 
+			 while (Integer.parseInt(list.get(pointerLeft)[switcher]) > medianValue) pointerLeft++;
+			 while (Integer.parseInt(list.get(pointerRight)[switcher]) < medianValue) pointerRight--; 
+			 if (pointerLeft <= pointerRight) Collections.swap(list, pointerLeft++, pointerRight--); 
 		 } while (pointerLeft <= pointerRight);
 	 
-	 	 if ( leftMostIndex < pointerRight ) quickSort(list, leftMostIndex, pointerRight, switcher);
-	 	 if ( pointerLeft < rightMostIndex ) quickSort(list, pointerLeft, rightMostIndex, switcher);
+	 	 if (leftMostIndex < pointerRight) quickSort(list, leftMostIndex, pointerRight, switcher);
+	 	 if (pointerLeft < rightMostIndex) quickSort(list, pointerLeft, rightMostIndex, switcher);
 	 }
 	
 }

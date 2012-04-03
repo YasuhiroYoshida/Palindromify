@@ -11,9 +11,9 @@
 int listSize = ocjp6.Palindrome.records.size();
 int toIndex = 5 < listSize ? 5 : listSize;
 
-if(toIndex != 0 && ocjp6.Palindrome.records.get(0)[0] != ""){
+if (toIndex != 0 && ocjp6.Palindrome.records.get(0)[0] != "") {
   List<String[]> subList = ocjp6.Palindrome.records.subList(0, toIndex);
-  for(int i=0; i<subList.size(); i++){ 
+  for (int i = 0; i < subList.size(); i++) { 
 %>
 <tr><td align="left"><%= subList.get(i)[0] %></td><td align="right"> <%= subList.get(i)[2] %> pts</td></tr>
 <%
@@ -25,9 +25,9 @@ if(toIndex != 0 && ocjp6.Palindrome.records.get(0)[0] != ""){
 <% 
 int toIndexH = toIndex;
 
-if(toIndexH != 0 && ocjp6.Palindrome.recordsH.get(0)[0] != ""){
+if (toIndexH != 0 && ocjp6.Palindrome.recordsH.get(0)[0] != "") {
   List<String[]> subListH = ocjp6.Palindrome.recordsH.subList(0, toIndex);
-  for(int i=0; i<subListH.size(); i++){ 
+  for (int i = 0; i < subListH.size(); i++) { 
 %>
 <tr><td align="left"><%= subListH.get(i)[0] %></td><td align="right"> <%= subListH.get(i)[3] %> pts</td></tr>
 <%
